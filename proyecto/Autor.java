@@ -1,3 +1,4 @@
+package proyecto;
 // @autor JuanJoseC
 
 public class Autor {

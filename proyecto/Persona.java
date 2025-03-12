@@ -1,3 +1,4 @@
+package proyecto;
 /**
  * Clase que representa a una Persona
  */
