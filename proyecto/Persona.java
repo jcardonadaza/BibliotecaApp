@@ -9,45 +9,31 @@ public class Persona {
     private String correoElectronico;
     
     // Getters y Setters
-    
-    /**
-     * Obtiene el nombre de la persona
-     */
     public String getNombre() {
         return nombre;
     }
     
-    /**
-     * Establece el nombre de la persona
-     */
+    // setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     
-    /**
-     * Obtiene el documento de identidad de la persona
-     */
+    // getters
     public String getDocumentoIdentidad() {
         return documentoIdentidad;
     }
     
-    /**
-     * Establece el documento de identidad de la persona
-     */
+    // setters
     public void setDocumentoIdentidad(String documentoIdentidad) {
         this.documentoIdentidad = documentoIdentidad;
     }
     
-    /**
-     * Obtiene el correo electrónico de la persona
-     */
+    // getters
     public String getCorreoElectronico() {
         return correoElectronico;
     }
     
-    /**
-     * Establece el correo electrónico de la persona
-     */
+    // setters
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }

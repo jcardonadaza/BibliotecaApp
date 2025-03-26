@@ -5,11 +5,13 @@ import java.util.Comparator;
 
 public class Biblioteca {
     private ArrayList<Libro> libros;
-
+    
+    // constructor
     public Biblioteca() {
         this.libros = new ArrayList<>();
     }
 
+    // los metodos de la clase Biblioteca
     public String mostrarLibros() {
         StringBuilder sb = new StringBuilder();
         for (Libro libro : libros) {
@@ -17,7 +19,8 @@ public class Biblioteca {
         }
         return sb.toString();
     }
-
+    
+    // getters y los setters
     public boolean agregarLibro(Libro libro) {
         return libros.add(libro);
     }
@@ -31,6 +34,7 @@ public class Biblioteca {
         return null;
     }
 
+    // se actualiza el libro con el id dado por el usuario 
     public boolean actualizarLibro(long id, Libro nuevoLibro) {
         for (int i = 0; i < libros.size(); i++) {
             if (libros.get(i).getId() == id) {
@@ -41,10 +45,12 @@ public class Biblioteca {
         return false;
     }
 
+    // se elimina el libro con el id dado por el usuario 
     public boolean eliminarLibro(long id) {
         return libros.removeIf(libro -> libro.getId() == id);
     }
 
+    // se obtienen los libros ordenados alfabeticamente segun se ballan agregando por el titilo
     public ArrayList<Libro> obtenerLibrosAlfabeticamente() {
         ArrayList<Libro> librosOrdenados = new ArrayList<>(libros);
         Collections.sort(librosOrdenados, Comparator.comparing(Libro::getTitulo));

@@ -23,24 +23,24 @@ public class InterfazBiblioteca extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
 
-        // Panel de contenido
+        // se agrega el contenido del panel como tal 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBackground(new Color(245, 245, 245)); // Fondo claro
+        panel.setBackground(new Color(245, 245, 245)); // se coloca el color del fondo de la interfaz o ventana
 
-        // Añadir título
+        // se añade el titulod e la interfaz
         JLabel titulo = new JLabel("Sistema de Biblioteca");
         titulo.setFont(new Font("Arial", Font.BOLD, 24));
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(titulo);
 
-        // Panel para agregar libro
+        // panel donde se agregaran los libros
         JPanel libroPanel = new JPanel();
         libroPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10); // Espaciado entre elementos
+        gbc.insets = new Insets(10, 10, 10, 10); // es el espacio que hay entre los componentes 
 
-        // Enunciados y campos de texto
+        // se colocan los enunciados y los campos de texto para agregar un libro 
         gbc.gridx = 0;
         gbc.gridy = 0;
         libroPanel.add(new JLabel("ID del Libro:"), gbc);
@@ -72,11 +72,11 @@ public class InterfazBiblioteca extends JFrame {
 
         panel.add(libroPanel);
 
-        // Panel para agregar persona
+        // se agregan los campos de texto para agregar una persona 
         JPanel personaPanel = new JPanel();
         personaPanel.setLayout(new GridBagLayout());
 
-        // Enunciados y campos de texto
+        // donde se agregar o ingresan los datos del autor o de la persona que escribio el libro 
         gbc.gridx = 0;
         gbc.gridy = 0;
         personaPanel.add(new JLabel("Nombre Persona:"), gbc);
@@ -116,14 +116,14 @@ public class InterfazBiblioteca extends JFrame {
 
         panel.add(personaPanel);
 
-        // Text area para mostrar libros
+        // se muestran los libros que se han agregado
         textAreaLibros = new JTextArea();
         textAreaLibros.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textAreaLibros);
         scrollPane.setPreferredSize(new Dimension(500, 150));
         panel.add(scrollPane);
 
-        // Botón para mostrar libros
+        // boton para mostrar los libros que se hana gregado 
         JButton mostrarLibrosButton = new JButton("Mostrar Libros");
         mostrarLibrosButton.setFont(new Font("Arial", Font.PLAIN, 16));
         mostrarLibrosButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -135,7 +135,7 @@ public class InterfazBiblioteca extends JFrame {
         });
         panel.add(mostrarLibrosButton);
 
-        // Configurar la ventana
+        // se agrega el panel al frame
         add(panel);
     }
 
