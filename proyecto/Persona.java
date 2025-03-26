@@ -1,7 +1,6 @@
 package proyecto;
-/**
- * Clase que representa a una Persona
- */
+
+
 public class Persona {
     // Atributos
     private String nombre;
@@ -35,6 +34,9 @@ public class Persona {
     
     // setters
     public void setCorreoElectronico(String correoElectronico) {
+        if (!correoElectronico.contains("@")) {
+            throw new IllegalArgumentException("Correo inválido: debe contener '@'.");
+        }
         this.correoElectronico = correoElectronico;
     }
 }

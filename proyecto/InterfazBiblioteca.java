@@ -1,9 +1,11 @@
 package proyecto;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class InterfazBiblioteca extends JFrame {
 
@@ -34,6 +36,16 @@ public class InterfazBiblioteca extends JFrame {
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(titulo);
 
+        // agregar imagen de header header.jpeg
+        try {
+            Image imagen = ImageIO.read(getClass().getResource("/header.jpeg"));
+            JLabel imagenLabel = new JLabel(new ImageIcon(imagen));
+            imagenLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+            panel.add(imagenLabel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         // panel donde se agregaran los libros
         JPanel libroPanel = new JPanel();
         libroPanel.setLayout(new GridBagLayout());
